@@ -7,4 +7,4 @@ EntaBrainPay — официален сайт (GitHub Pages).
 - privacy.html / privacy-en.html — политика за поверителност
 - terms.html — правила
 
-Актуален адрес: https://promiraeva.github.io/entachain/
+Актуален адрес: https://entachain.github.io/entachain/
