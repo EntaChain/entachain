@@ -96,3 +96,9 @@ footer a{color:var(--muted)}
   .hero{padding:56px 0 36px}
   footer{flex-direction:column}
 }
+
+/* Езиков превключвател BG / EN — добавя се от lang.js */
+.lang-switch{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.lang-switch a{padding:3px 10px;font-size:13px;font-weight:700;letter-spacing:.4px;color:rgba(255,255,255,.75)}
+.lang-switch a:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.lang-switch a.is-active{background:var(--cyan);color:#0a0e17}
