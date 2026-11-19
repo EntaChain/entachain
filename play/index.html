@@ -43,6 +43,23 @@
 
   <title>entabrainpay</title>
   <link rel="manifest" href="manifest.json">
+  <!-- Принудително обновяване: ако версията в адреса е нова, махаме
+       service worker-а и презареждаме веднъж. Иначе браузърът държи
+       стария билд със седмици. -->
+  <script>
+    (function () {
+      var v = new URLSearchParams(location.search).get('v');
+      var key = 'enta_web_version';
+      if (!v || localStorage.getItem(key) === v) return;
+      localStorage.setItem(key, v);
+      if (!('serviceWorker' in navigator)) return;
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        return Promise.all(regs.map(function (r) { return r.unregister(); }));
+      }).then(function () {
+        location.replace(location.pathname + '?v=' + v);
+      });
+    })();
+  </script>
 </head>
 <body>
   <!--
