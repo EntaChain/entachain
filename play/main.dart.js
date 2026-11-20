@@ -9759,22 +9759,26 @@ ao_:function ao_(){},
 anW:function anW(){},
 anU:function anU(){},
 anV:function anV(){},
-b93(a){var s,r,q,p=a.hf()
-p.toString
-t.a.a(p)
+b93(a){var s,r,q,p,o=a.hf()
+o.toString
+t.a.a(o)
 s=B.b.gaq(a.b.b.a)
-r=p.h(0,"displayName")
+r=o.h(0,"displayName")
 if(r==null)r="Anonymous"
-q=p.h(0,"score")
+q=o.h(0,"score")
 if(q==null)q=0
-p.h(0,"totalQuizzes")
-p.h(0,"correctAnswers")
-A.pB(t.y4.a(p.h(0,"updatedAt")).gov())
-p.h(0,"photoUrl")
-return new A.kY(s,r,q)},
-kY:function kY(a,b,c){this.a=a
-this.b=b
-this.c=c},
+p=o.h(0,"weekScore")
+if(p==null)p=0
+o.h(0,"totalQuizzes")
+o.h(0,"correctAnswers")
+A.pB(t.y4.a(o.h(0,"updatedAt")).gov())
+o.h(0,"photoUrl")
+return new A.kY(s,r,q,p)},
+kY:function kY(a,b,c,d){var _=this
+_.a=a
+_.b=b
+_.c=c
+_.d=d},
 bnV(a){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=a.h(0,"entries"),e=A.b([],t.NF)
 if(t.j.b(f))for(r=J.bw(f),q=t.f,p=t.N,o=t.z;r.u();){s=r.gR()
 if(q.b(s))try{n=A.ec(s,p,o)
@@ -10145,12 +10149,16 @@ _.e=c
 _.f=d
 _.a=e},
 a98:function a98(a){this.a=a},
-aPa:function aPa(a){this.a=a},
-aP9:function aP9(a,b){this.a=a
+aPa:function aPa(a,b){this.a=a
 this.b=b},
-aP8:function aP8(a,b,c){this.a=a
+aP9:function aP9(a,b,c){this.a=a
 this.b=b
 this.c=c},
+aP8:function aP8(a,b,c,d){var _=this
+_.a=a
+_.b=b
+_.c=c
+_.d=d},
 aP6:function aP6(a,b,c){this.a=a
 this.b=b
 this.c=c},
@@ -57988,7 +57996,7 @@ g=j.c
 g.toString
 g=A.L(g).ax
 f=g.rx
-h.push(A.cW(A.k4(i,A.F("EntaBrainPay 1.2.74",i,i,i,i,A.bY(i,i,f==null?g.k3:f,i,i,i,i,i,i,i,i,11,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),i,i),B.V,!1,i,i,i,i,i,i,i,i,i,i,i,i,i,i,j.gazt(),i,i,i,i,i,i),i,i))
+h.push(A.cW(A.k4(i,A.F("EntaBrainPay 1.2.75",i,i,i,i,A.bY(i,i,f==null?g.k3:f,i,i,i,i,i,i,i,i,11,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),i,i),B.V,!1,i,i,i,i,i,i,i,i,i,i,i,i,i,i,j.gazt(),i,i,i,i,i,i),i,i))
 return A.qY(A.bt(h,B.u,B.q,B.w),i,B.V,B.aQ,i,B.a8)}}
 A.aSa.prototype={
 $1(a){return B.NA},
@@ -58136,7 +58144,7 @@ K(a){var s=this,r=null,q=s.f
 return A.dp(new A.aB(B.aQ,A.bt(A.b([A.fo(s.e,q,r,32),B.ap,A.F(s.d,r,r,r,r,A.bY(r,r,q,r,r,r,r,r,r,r,r,20,r,r,B.ac,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.F(s.c,r,r,r,r,A.bY(r,r,B.ff,r,r,r,r,r,r,r,r,12,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),B.al,r)],t.p),B.u,B.q,B.w),r),r,r,2,r)}}
 A.a98.prototype={
 K(a){var s=null,r=t.p,q=A.b3_(s,A.b([A.r0(s,A.U(a).M("global_tab")),A.r0(s,A.U(a).M("weekly_tab"))],r)),p=$.bgq()
-return A.b7x(A.bt(A.b([q,A.dE(A.b30(A.b([this.Wh(p.BO()),this.Wh(p.BW())],r),s),1)],r),B.u,B.q,B.w),2)},
+return A.b7x(A.bt(A.b([q,A.dE(A.b30(A.b([this.Wh(p.BO(),!1),this.Wh(p.BW(),!0)],r),s),1)],r),B.u,B.q,B.w),2)},
 yA(a,b,c,d){return this.atF(a,b,c,d)},
 atF(a,b,c,d){var s=0,r=A.l(t.H),q,p,o,n
 var $async$yA=A.m(function(e,f){if(e===1)return A.i(f,r)
@@ -58157,28 +58165,28 @@ break}o=a.ai(t.Q).f
 o.fj(A.eD(null,null,null,null,null,B.x,null,A.F(n.M(p==null?"report_sent":"report_failed"),null,null,null,null,null,null,null),null,B.b2,null,null,null,null,null,null,null,null,null,null))
 case 1:return A.j(q,r)}})
 return A.k($async$yA,r)},
-Wh(a){return A.Wp(new A.aPa(this),a,t.wE)}}
+Wh(a,b){return A.Wp(new A.aPa(this,b),a,t.wE)}}
 A.aPa.prototype={
 $2(a,b){var s,r=null
 if(b.a===B.ej)return B.bs
 s=b.b
 if(s==null||J.lP(s))return A.cW(A.F(A.U(a).M("no_data"),r,r,r,r,r,r,r),r,r)
-return A.ze(new A.aP9(this.a,s),J.bH(s),r,r,B.a8,!1)},
+return A.ze(new A.aP9(this.a,s,this.b),J.bH(s),r,r,B.a8,!1)},
 $S:612}
 A.aP9.prototype={
 $2(a,b){var s,r,q=J.d9(this.b,b)
 if(b===0)s="\ud83e\udd47"
 else if(b===1)s="\ud83e\udd48"
 else{r=b===2?"\ud83e\udd49":""+(b+1)
-s=r}return A.fx($.xh(),new A.aP8(this.a,q,s),null)},
+s=r}return A.fx($.xh(),new A.aP8(this.a,q,s,this.c),null)},
 $S:615}
 A.aP8.prototype={
-$2(a,b){var s,r=null,q=this.b,p=$.xh().b.n(0,q.a),o=A.F(this.c,r,r,r,r,B.Md,r,r),n=p?A.U(a).M("hidden_player"):q.b
-n=A.F(n,r,r,r,r,p?B.amQ:r,r,r)
-s=A.b([A.F(""+q.c+" pts",r,r,r,r,B.bF,r,r)],t.p)
-if(!p)s.push(A.baa(r,r,new A.aP5(a),new A.aP6(this.a,a,q),A.U(a).M("report_or_block"),t.N))
-else s.push(A.uh(r,r,r,B.X7,r,r,new A.aP7(q),r,r,r,A.U(a).M("unblock_user")))
-return A.hA(!1,r,r,r,!0,r,r,r,!0,r,o,r,r,r,r,r,!1,r,r,r,r,r,r,n,A.cl(s,B.u,B.q,B.aj,0),r)},
+$2(a,b){var s,r=this,q=null,p=r.b,o=$.xh().b.n(0,p.a),n=A.F(r.c,q,q,q,q,B.Md,q,q),m=o?A.U(a).M("hidden_player"):p.b
+m=A.F(m,q,q,q,q,o?B.amQ:q,q,q)
+s=A.b([A.F(""+(r.d?p.d:p.c)+" pts",q,q,q,q,B.bF,q,q)],t.p)
+if(!o)s.push(A.baa(q,q,new A.aP5(a),new A.aP6(r.a,a,p),A.U(a).M("report_or_block"),t.N))
+else s.push(A.uh(q,q,q,B.X7,q,q,new A.aP7(p),q,q,q,A.U(a).M("unblock_user")))
+return A.hA(!1,q,q,q,!0,q,q,q,!0,q,n,q,q,q,q,q,!1,q,q,q,q,q,q,m,A.cl(s,B.u,B.q,B.aj,0),q)},
 $S:617}
 A.aP6.prototype={
 $1(a){var s=this.c
